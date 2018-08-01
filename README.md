@@ -16,7 +16,7 @@ This tutorial includes
 In the future, you may wish to
 + Downloaded SEPP/TIPP from [here](https://github.com/smirarab/sepp).
 + Work through additional tutorials found [here](https://github.com/smirarab/sepp/tree/master/tutorial).
-+ Download SEPP/TIPP reference packages from [LINK TBA]()
++ Download SEPP/TIPP reference packages. The current packages are partly tested but do not have a permanent home, but they are temporarly on [Dropbox](https://www.dropbox.com/s/98r7r9ccf1zgyqt/tipp-2017.zip).
 
 Citations
 ---------
