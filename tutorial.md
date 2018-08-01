@@ -57,13 +57,13 @@ The next two options specify the decomposition of the reference alignment and tr
 + `-A [alignment subset size]`
 + `-P [placement subset size]`
 
-TIPP was run with an alignment subset size of 100 (slightly less than 10% of the Clostridia reference package) and a placement subset size of 1000 (greater than the entire Clostridia reference package). Recall that running SEPP/TIPP with larger placement subset sizes can increase accuracy but is more computationally intensive. The default alignment subset size follows the 10% rule.
+TIPP was run with an alignment subset size of 100 (slightly less than 10% of the Clostridia reference package) and a placement subset size of 1000 (greater than the entire Clostridia reference package). Recall that running SEPP/TIPP with larger placement subset sizes can increase accuracy but is more computationally intensive. The default alignment subset size follows the 10% rule (i.e., 10% of the placement subset). 
 
 The next two options specify the support thresholds used by TIPP.
 + `-at [alignment support threshold]`
 + `-pt [placement support threshold]`
 
-TIPP was run with support thresholds of 0.95, which is the default. 
+TIPP was run with support thresholds of 0.95, which is the default. (More recent experiments have suggested this might be conservative, so relaxing this is an option to get broader classification at the risk of a slight increase in false-positives.)
 
 The next two options specify the input and output.
 + `-f [`[`fragment file -- fasta`](samples/16S/SRR1219742_RDP_2016_Clostridia.fasta)`]`
@@ -99,6 +99,8 @@ shows the majority of reads are unclassified (545 reads). Classified reads are l
 *Before moving on, repeat this portion of the tutorial running TIPP with a lower alignment/placement support threshold (e.g., 0.50). What do the support values look like for reads classified at the species level? How does the number of reads unclassified at the species level compare to TIPP run with an alignment/placement support threshold of 0.95?*
 
 **NOTE: In general, SEPP/TIPP should be run on reads and their reverse complement; however, this has already been handled for this tutorial.**
+
+
 
 
 Part II: Phylogenetic Placement using SEPP
