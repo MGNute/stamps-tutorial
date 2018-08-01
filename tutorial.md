@@ -20,10 +20,9 @@ To begin, ssh onto the MBL servers, clone this repository,
 ```
 git clone https://github.com/MGNute/stamps-tutorial.git
 ```
-and load the python 2.7.12 module
+and load the python 3.6.5 module
 ```
-module purge
-module load python/2.7.12-201701011205
+module load python
 ```
 Change into the tipp directory,
 ```
