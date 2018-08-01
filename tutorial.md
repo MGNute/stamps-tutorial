@@ -16,7 +16,7 @@ Taxonomic identification and abundance profiling (with TIPP) of whole shotgun sa
 
 Part I: Taxonomic Identification using TIPP
 -------------------------------------------
-To begin, ssh onto the MBL servers, clone this repository,
+To begin, log in to the MBL servers using ssh using the [instructions from the STAMPS organizers](https://github.com/mblstamps/stamps2018/wiki/Installation#connecting-to-the-mbl-servers). Once you are logged in to the class-## server (the second one), clone this repository:
 ```
 git clone https://github.com/MGNute/stamps-tutorial.git
 ```
