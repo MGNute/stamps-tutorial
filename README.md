@@ -2,13 +2,14 @@ Metagenomic Analysis using Phylogeny-Aware Profiles
 ===================================================
 
 Instructor: [Tandy Warnow](http://tandy.cs.illinois.edu)  
-Teaching Assistant: [Erin Molloy](http://emolloy2.web.engr.illinois.edu)   
+Teaching Assistant: [Mike Nute](http://publish.illinois.edu/michaelnute/)   
 
 Learn how to analyze metagenomic datasets with the **SEPP** (SATe-Enabled Phylogenetic Placement) and **TIPP** (Taxonomic Identification and Phylogenetic Profiling) software programs!
 
 This tutorial includes
 + [Lecture slides](http://tandy.cs.illinois.edu/stamps-warnow.pdf)
-+ [Hands-on worksheet](tutorial.md) *-- written for the installation of SEPP/TIPP on the MLB servers for [STAMPS 2017](https://stamps.mbl.edu/index.php/Schedule)*
++ [Hands-on worksheet](tutorial.md) *-- written for the installation of SEPP/TIPP on the MLB servers for [STAMPS 2018](https://github.com/mblstamps/stamps2018/wiki#workshop-instructors-and-lecturers)*
++ [Reference Slides from Tutorial] 
 
 **Please flag us down when you have questions, we are happy to help!**
 
