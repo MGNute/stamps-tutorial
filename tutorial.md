@@ -143,7 +143,7 @@ python /class/stamps-software/sepp/run_sepp.py \
 ```
 Both the command and the output are nearly identical to TIPP; however, alignment and placement support thresholds are not specified, and the classification file is not written. Use the [placement file from SEPP](sepp/out/SEPP-RDP-RUMINO-READS_placement.json) to rank the five reads by the branch length connecting the read to the Ruminococcaceae tree. You may need read more about the json file format [here](https://matsen.github.io/pplacer/generated_rst/pplacer.html) (search for JSON format specification) or [here](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0031009). 
 
-Now we will visualize these placements by converting the placement file into a tree format (e.g., newick or xml) with [guppy](https://matsen.github.io/pplacer/generated_rst/guppy.html)
+For this example, we will try out some other tools for visualizing phylogenetic placement. We will first be converting the placement file into a tree format (e.g., newick or xml) with [guppy](https://matsen.github.io/pplacer/generated_rst/guppy.html)
 ```
 /class/stamps-software/sepp/.sepp/bundled-v4.3.2/guppy tog \
     --xml \
@@ -178,7 +178,7 @@ scp [user-name]@class.mbl.edu:~/stamps-tutorial/sepp/SEPP-RDP-RUMINO-READS_subse
 
 *Before moving on, let's consider the relationship between alignment, placement, and classification. Use the [cladogram](images/helio-cladogram.pdf) to identify reference sequences near GEQJ1S112HN8VO (e.g., Heliobacterium_modesticaldum_11 -- taxon ID is in the TIPP classification file 498761 -- and the sequence ID is S000469502 -- grep for S000469502). Go back to the TIPP directory, and extract these sequences from the alignment file from TIPP. Visualize the alignment, and compare it to the visualization of GEQJ1S112HF5CU. Now examine the placement file from TIPP. What are branch lengths and maximum likelihood scores for placements of GEQJ1S112HN8VO onto the Clostridia reference tree? Based on this alignment and placement information, discuss TIPP (with 0.50 support thresholds) classifying GEQJ1S112HN8VO as Heliobacterium modesticaldum Ice1 (below species level) versus TIPP (with 0.95 support thresholds) classifying GEQJ1S112HN8VO as Clostridiales order and Unclassified at the family, genus, and species levels.*
 
-**JUST A REMINDER: Small reference alignments and trees are used in this tutorial to save time and make visualization easier; however, the benefits of using SEPP/TIPP are greatest when trees have a large evolutionary diameters -- which is more likely for trees are large. New tools for visualizing phylogenetic placements for large trees are on the way, courtesy of [Mike Nute](https://publish.illinois.edu/michaelnute/)!**
+**JUST A REMINDER: Small reference alignments and trees are used in this tutorial to save time and make visualization easier; however, the benefits of using SEPP/TIPP are greatest when trees have a large evolutionary diameters and when query sequences are potentially novel or divergent from the any reference sequences. New tools for visualizing phylogenetic placements in the graphical format used in Part I are on the way. A *very* preliminary version of the code to generate them is available on [Github](https://github.com/MGNute/phylogenetic_histograms) and an accompanying manuscript has been submitted.**
 
 Part III: Phylogenetic (Abundance) Profiling with TIPP
 ------------------------------------------------------
