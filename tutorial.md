@@ -105,17 +105,23 @@ Remember that part of TIPP involves using SEPP to place the reads into a *taxono
 
 Here are two pictures of the reference taxonomy that we used as the backbone for TIPP. The first labels each leaf by its [order](images/RDP_2016_Clostridia_taxonomy_by_order.pdf), and the second goes further and labels them by [family](images/RDP_2016_Clostridia_taxonomy_by_family.pdf). This gives us an idea of what the backbone taxonomy looks like, for reference when we look at the placement. 
 
-Start by looking at the reference image by [family](images/RDP_2016_Clostridia_taxonomy_by_family.pdf), and compare it to the TIPP output by family:
+Now here is a picture of where the reads that *were* classified were [placed in the taxonomy](images/TIPP-RDP-CLOSTRIDIA-95-SRR1219742_phylo_heat_map.pdf). In this picture, a more vivid (or "saturated") color in one spot means more reads were placed there, whereas a faint color means fewer reads. The hue (e.g. red/orange/yellow/...) indicates the branch length. Recall that these reads were taken from a lemur sample.
+
+Compare this heat map to the reference image by [family](images/RDP_2016_Clostridia_taxonomy_by_family.pdf), and take a look at the TIPP classifications by family:
 ```
 cat FINAL-TIPP-RDP-CLOSTRIDIA-95-SRR1219742_family.csv
 ```
 - *What is the most abundant family in this sample?*
-- *Is that family well represented?*
+- *Is that family well represented or is there one subgroup that is a heavy majority? What about the second most abundant?*
 
+Now let's go down to the genus level. [Here is a partially labelled picture](https://github.com/MGNute/stamps-tutorial/blob/master/images/RDP_2016_Clostridia_taxonomy_by_genus_partial.pdf) of the reference tree showing several key genera. Compare that to TIPP classifications at the genus level:
+```
+cat FINAL-TIPP-RDP-CLOSTRIDIA-95-SRR1219742_genus.csv
+```
+- *What is the most abundant genus in this sample?* 
+- *Where are the reads in the heat map located in relation to the leaves? What does that tell you about these microbes?*
+- *What about the second most abundant?*
 
-Now here is a picture of where the reads that *were* classified were [placed in the taxonomy](images/TIPP-RDP-CLOSTRIDIA-95-SRR1219742_phylo_heat_map.pdf). In this picture, a more vivid (or "saturated") color in one spot means more reads were placed there, whereas a faint color means fewer reads. The hue (e.g. red/orange/yellow/...) indicates the branch length. Recall that these reads were taken from a lemur sample.
-
-- *Does this image agree with the abundance profile that TIPP produced?*
 
 Part II: Phylogenetic Placement using SEPP
 ------------------------------------------
