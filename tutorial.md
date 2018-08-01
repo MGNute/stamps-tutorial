@@ -18,7 +18,7 @@ Part I: Taxonomic Identification using TIPP
 -------------------------------------------
 To begin, ssh onto the MBL servers, clone this repository,
 ```
-git clone https://github.com/ekmolloy/stamps-tutorial.git
+git clone https://github.com/MGNute/stamps-tutorial.git
 ```
 and load the python 2.7.12 module
 ```
@@ -100,8 +100,15 @@ shows the majority of reads are unclassified (545 reads). Classified reads are l
 
 **NOTE: In general, SEPP/TIPP should be run on reads and their reverse complement; however, this has already been handled for this tutorial.**
 
+Part I.a: Visualizing the TIPP Placements
+------------------------------------------
+Remember that part of TIPP involves using SEPP to place the reads into a *taxonomy* (i.e., a phylogenetic tree that is forced to conform to a pre-determined taxonomy). Sometimes it is helpful to visualize the placement of the full (or near-full) sample at once. This can sometimes make the composition of each sample clearer in a way that a table of percentages can't always.
 
+Here are two pictures of the reference taxonomy that we used as the backbone for TIPP. The first labels each leaf by its [order](images/RDP_2016_Clostridia_taxonomy_by_order.pdf), and the second goes further and labels them by [family](images/RDP_2016_Clostridia_taxonomy_by_family.pdf). This gives us an idea of what the backbone taxonomy looks like, for reference when we look at the placement. 
 
+Now here is a picture of where the reads that *were* classified were [placed in the taxonomy](images/TIPP-RDP-CLOSTRIDIA-95-SRR1219742_phylo_heat_map.pdf). In this picture, a more vivid (or "saturated") color in one spot means more reads were placed there, whereas a faint color means fewer reads. The hue (e.g. red/orange/yellow/...) indicates the branch length. Recall that these reads were taken from a lemur sample.
+
+- *Does this image agree with the abundance profile that TIPP produced?*
 
 Part II: Phylogenetic Placement using SEPP
 ------------------------------------------
@@ -156,7 +163,7 @@ GBEHU2E07D5RLY red ad
 ```
 **NOTE: that the above spaces need to be tabs!**
 
-Examining the [cladogram](images/rumino-cladogram.pdf), we can notice that GEQJ1S112HNELY was placed closer to the root than the GEQJ1S112HF5CU, which was placed sister to Saccharofermentans acetigenes -- however based on the [branch length](images/rumino-phylogeny.pdf) GEQJ1S112HF5CU may not necessarily have very high sequence identity to Saccharofermentans accetigenes. Branch lengths can also be very short, see placement of the query sequence GEQJ1S112HN8VO on the Heliobacterium reference package [here](https://github.com/ekmolloy/stamps-tutorial/blob/master/images/helio-phylogeny.pdf).
+Examining the [cladogram](images/rumino-cladogram.pdf), we can notice that GEQJ1S112HNELY was placed closer to the root than the GEQJ1S112HF5CU, which was placed sister to Saccharofermentans acetigenes -- however based on the [branch length](images/rumino-phylogeny.pdf) GEQJ1S112HF5CU may not necessarily have very high sequence identity to Saccharofermentans accetigenes. Branch lengths can also be very short, see placement of the query sequence GEQJ1S112HN8VO on the Heliobacterium reference package [here](https://github.com/MGNute/stamps-tutorial/blob/master/images/helio-phylogeny.pdf).
 
 Use the [alignment file from SEPP](sepp/out/SEPP-RDP-RUMINO-READS_alignment.fasta) to compare the read GEQJ1S112HF5CU to the reference sequence Saccharofermentans_acetigenes_1. Extract the two sequences into a new fasta file
 ```
@@ -197,7 +204,7 @@ The above command includes the following new options,
 + `-c [configuration file for TIPP]`
 + `-d [name of output directory]`
 
-and the [output](tipp/out/TIPP-95-COGS-SRR059420) will include abundance profile for each taxonomic rank, for example, the [genus-level abundance profile](tipp/out/TIPP-95-COGS-SRR059420/abundance.genus.csv) shows that the 95% of reads (that match to a COG) are classified as Bacteroides. Finally, the [markers folder](https://github.com/ekmolloy/stamps-tutorial/tree/master/tipp/out/TIPP-95-COGS-SRR059420/markers) contains the output from running TIPP on each of the markers.
+and the [output](tipp/out/TIPP-95-COGS-SRR059420) will include abundance profile for each taxonomic rank, for example, the [genus-level abundance profile](tipp/out/TIPP-95-COGS-SRR059420/abundance.genus.csv) shows that the 95% of reads (that match to a COG) are classified as Bacteroides. Finally, the [markers folder](https://github.com/MGNute/stamps-tutorial/tree/master/tipp/out/TIPP-95-COGS-SRR059420/markers) contains the output from running TIPP on each of the markers.
 
 *Before leaving Woods Hole, consider using the commands in this portion of the tutorial to analyze a shotgun dataset of interest to you. Let us know how it goes!* **Thank you for taking the time to do this tutorial!**
 
