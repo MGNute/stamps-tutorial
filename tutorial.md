@@ -162,11 +162,11 @@ For this example, we will try out some other tools for visualizing phylogenetic 
     --xml \
     SEPP-RDP-RUMINO-READS_placement.json
 ```
-Download the xml file onto your personal computer, e.g., by opening a new terminal and typing
+Download the xml file onto your personal computer. Since we are logged in using two layers this year, copying this to your local machine is more trouble than it's worth, so download [this pre-baked version](https://www.dropbox.com/s/sbsi4xthmg2rgp7/SEPP-RDP-RUMINO-READS_placement.tog.xml?dl=0) instead. You can get it right from a web browser, or you can use wget from the command line:
 ```
-scp [user-name]@class.mbl.edu:~/stamps-tutorial/sepp/SEPP-RDP-RUMINO-READS_placement.tog.xml ~/Desktop
+wget https://www.dropbox.com/s/sbsi4xthmg2rgp7/SEPP-RDP-RUMINO-READS_placement.tog.xml?dl=0
 ```
-and open the file with your favorite tree viewer. [EvolView](http://www.evolgenius.info/evolview) can be used to visualize the placement of query sequences in the reference tree with [colored branches](http://evolview.codeplex.com/wikipage?title=DatasetBranchColor) and [colored leaves](https://evolview.codeplex.com/wikipage?title=DatasetLeafColor). After the uploading the file, hover over "Annatotation upload", click on the buttons that are second (branch color) and third (leaf color) from the left, and add the text
+Now open the file with your favorite tree viewer. [EvolView](http://www.evolgenius.info/evolview) can be used to visualize the placement of query sequences in the reference tree with [colored branches](http://evolview.codeplex.com/wikipage?title=DatasetBranchColor) and [colored leaves](https://evolview.codeplex.com/wikipage?title=DatasetLeafColor). After the uploading the file, hover over "Annatotation upload", click on the buttons that are second (branch color) and third (leaf color) from the left, and add the text
 ```
 GEQJ1S112HF5CU red ad   
 GEQJ1S110GHR11 red ad   
@@ -183,9 +183,9 @@ Use the [alignment file from SEPP](sepp/out/SEPP-RDP-RUMINO-READS_alignment.fast
 grep -A1 "GEQJ1S112HF5CU" SEPP-RDP-RUMINO-READS_alignment.fasta > SEPP-RDP-RUMINO-READS_subset.fasta
 grep -A1 "Saccharofermentans_acetigenes_1" SEPP-RDP-RUMINO-READS_alignment.fasta >> SEPP-RDP-RUMINO-READS_subset.fasta
 ```
-and download it onto your personal computer, e.g., by opening a new terminal and typing
+and download it onto your personal computer. Again, copying it is more trouble that it's worth, so download it from [here](https://www.dropbox.com/s/nailtpu67rt8dkv/SEPP-RDP-RUMINO-READS_subset.fasta?dl=0), or use the terminal:
 ```
-scp [user-name]@class.mbl.edu:~/stamps-tutorial/sepp/SEPP-RDP-RUMINO-READS_subset.fasta ~/Desktop
+wget https://www.dropbox.com/s/nailtpu67rt8dkv/SEPP-RDP-RUMINO-READS_subset.fasta?dl=0
 ```
 [MSAViewer](http://msa.biojs.net) can be used to visualize the multiple sequence alignment. Scroll down and click the little arrow icon under "Use It". Then click "Import" followed by "From file".
 
