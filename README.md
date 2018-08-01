@@ -9,7 +9,7 @@ Learn how to analyze metagenomic datasets with the **SEPP** (SATe-Enabled Phylog
 This tutorial includes
 + [Lecture slides](http://tandy.cs.illinois.edu/stamps-warnow.pdf)
 + [Hands-on worksheet](tutorial.md) *-- written for the installation of SEPP/TIPP on the MLB servers for [STAMPS 2018](https://github.com/mblstamps/stamps2018/wiki#workshop-instructors-and-lecturers)*
-+ [Reference Slides from Tutorial] *-- Slides used in this tutorial, designed to be a quick guide with useful information for future reference*(https://github.com/MGNute/stamps-tutorial/blob/master/sepp_tipp_tutorial_slides.pdf)
++ [Reference Slides from Tutorial](https://github.com/MGNute/stamps-tutorial/blob/master/sepp_tipp_tutorial_slides.pdf) *-- Slides used in this tutorial, designed to be a quick guide with useful information for future reference*
 
 **Please flag us down when you have questions, we are happy to help!**
 

@@ -70,7 +70,7 @@ The next two options specify the input and output.
 
 The final options are set specifically for STAMPS tutorial to prevent temporary files from being written all over the MBL servers and limit the number of CPUs per user.
 
-To see all of the [TIPP options](tipp-help.md), run
+To see all of the [TIPP options](tipp-help.md), run the following command. There are a few practical pointers on these options in the [reference slides](https://github.com/MGNute/stamps-tutorial/blob/master/sepp_tipp_tutorial_slides.pdf) for this tutorial.
 ```
 python /class/stamps-software/sepp/run_tipp.py -h
 ```
@@ -104,6 +104,14 @@ Part I.a: Visualizing the TIPP Placements
 Remember that part of TIPP involves using SEPP to place the reads into a *taxonomy* (i.e., a phylogenetic tree that is forced to conform to a pre-determined taxonomy). Sometimes it is helpful to visualize the placement of the full (or near-full) sample at once. This can sometimes make the composition of each sample clearer in a way that a table of percentages can't always.
 
 Here are two pictures of the reference taxonomy that we used as the backbone for TIPP. The first labels each leaf by its [order](images/RDP_2016_Clostridia_taxonomy_by_order.pdf), and the second goes further and labels them by [family](images/RDP_2016_Clostridia_taxonomy_by_family.pdf). This gives us an idea of what the backbone taxonomy looks like, for reference when we look at the placement. 
+
+Start by looking at the reference image by [family](images/RDP_2016_Clostridia_taxonomy_by_family.pdf), and compare it to the TIPP output by family:
+```
+cat FINAL-TIPP-RDP-CLOSTRIDIA-95-SRR1219742_family.csv
+```
+- *What is the most abundant family in this sample?*
+- *Is that family well represented?*
+
 
 Now here is a picture of where the reads that *were* classified were [placed in the taxonomy](images/TIPP-RDP-CLOSTRIDIA-95-SRR1219742_phylo_heat_map.pdf). In this picture, a more vivid (or "saturated") color in one spot means more reads were placed there, whereas a faint color means fewer reads. The hue (e.g. red/orange/yellow/...) indicates the branch length. Recall that these reads were taken from a lemur sample.
 
