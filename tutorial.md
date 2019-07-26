@@ -81,7 +81,7 @@ grep ",species," TIPP-RDP-CLOSTRIDIA-95-SRR1219742_classification.txt
 ```
 Computing the number of reads classified at each taxonomic rank
 ```
-pip install pandas
+conda install -y -c anaconda pandas
 python ../tools/restructure_tipp_classification.py \
     -i TIPP-RDP-CLOSTRIDIA-95-SRR1219742_classification.txt \
     -o FINAL-TIPP-RDP-CLOSTRIDIA-95-SRR1219742
