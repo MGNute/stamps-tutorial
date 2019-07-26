@@ -7,11 +7,12 @@ PASTA="/opt/pasta-code/pasta/run_pasta.py"
 RAW_SEQUENCES="./gyrA_raw.fasta"
 
 # Decide on 
-JOB_NAME="gryA_pasta"
+JOB_NAME="gyrA_pasta"
 
 # Run PASTA
 python $PASTA -i $RAW_SEQUENCES \
              --temporaries "./tmp/" \
              -d Protein \
-             -j $JOB_NAME
- 
+             -j $JOB_NAME \
+             --num-cpus $(nproc) \
+             -o "./out"
