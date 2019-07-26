@@ -154,7 +154,7 @@ Both the command and the output are nearly identical to TIPP; however, alignment
 
 For this example, we will try out some other tools for visualizing phylogenetic placement. We will first be converting the placement file into a tree format (e.g., newick or xml) with [guppy](https://matsen.github.io/pplacer/generated_rst/guppy.html)
 ```
-/opt/sepp/.sepp/bundled-v4.3.2/guppy tog \
+/opt/sepp/.sepp/bundled-v4.3.8/guppy tog \
     --xml \
     SEPP-RDP-RUMINO-READS_placement.json
 ```
