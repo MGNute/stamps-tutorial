@@ -158,7 +158,7 @@ For this example, we will try out some other tools for visualizing phylogenetic 
     --xml \
     SEPP-RDP-RUMINO-READS_placement.json
 ```
-Download the xml file onto your personal computer. Since we are logged in using two layers this year, copying this to your local machine is more trouble than it's worth, so download [this pre-baked version](https://www.dropbox.com/s/sbsi4xthmg2rgp7/SEPP-RDP-RUMINO-READS_placement.tog.xml?dl=0) instead. You can get it right from a web browser, or you can use wget from the command line:
+Ordinarily you would download the xml file onto your personal computer. Since we are logged in Jupyter this year, copying this to your local machine is more trouble than it's worth, so download [this pre-baked version](https://www.dropbox.com/s/sbsi4xthmg2rgp7/SEPP-RDP-RUMINO-READS_placement.tog.xml?dl=0) instead. You can get it right from a web browser, or you can use wget from the terminal if you are using Linux:
 ```
 wget https://www.dropbox.com/s/sbsi4xthmg2rgp7/SEPP-RDP-RUMINO-READS_placement.tog.xml?dl=0
 ```
@@ -179,7 +179,7 @@ Use the [alignment file from SEPP](sepp/out/SEPP-RDP-RUMINO-READS_alignment.fast
 grep -A1 "GEQJ1S112HF5CU" SEPP-RDP-RUMINO-READS_alignment.fasta > SEPP-RDP-RUMINO-READS_subset.fasta
 grep -A1 "Saccharofermentans_acetigenes_1" SEPP-RDP-RUMINO-READS_alignment.fasta >> SEPP-RDP-RUMINO-READS_subset.fasta
 ```
-and download it onto your personal computer. Again, copying it is more trouble that it's worth, so download it from [here](https://www.dropbox.com/s/nailtpu67rt8dkv/SEPP-RDP-RUMINO-READS_subset.fasta?dl=0), or use the terminal:
+and download it onto your personal computer. Again, copying it is more trouble that it's worth, so download it from [here](https://www.dropbox.com/s/nailtpu67rt8dkv/SEPP-RDP-RUMINO-READS_subset.fasta?dl=0), or use the terminal if you are using Linux:
 ```
 wget https://www.dropbox.com/s/nailtpu67rt8dkv/SEPP-RDP-RUMINO-READS_subset.fasta?dl=0
 ```
