@@ -250,6 +250,10 @@ Here are some questions to consider:
 + Which alignment finds more matches between sites?
 + Which alignment is *better*? Why?
 
+Since this is biological sequence data, that last one is kind of a trick question. Presumably the alignment provided by NCBI has been curated to ensure that no obvious homologous sites are missed, but humans make mistakes too. If there were 10,000 sequences instead of 96, how accurate would you expect a curated alignment to be? 
+
+The only way to say whether one alignment is "better" than another is to compare them on simulated sequences, where the true alignment is known from the simulation. Here is a link to [some simulated alignment data](https://sites.google.com/eng.ucsd.edu/datasets/alignment/sate-i) that we have used in the past. The disadvantage of simulated data is that it may not reflect realistic biological sequence data. In one recent paper, we found a notable [divergence in aligner performance](https://academic.oup.com/sysbio/article/68/3/396/5133545) between biological and simulated data. 
+
 Citations
 ---------
 Cole, J. R., Q. Wang, J. A. Fish, B. Chai, D. M. McGarrell, Y. Sun, C. T. Brown, A. Porras-Alfaro, C. R. Kuske, and J. M. Tiedje. 2014. Ribosomal Database Project: data and tools for high throughput rRNA analysis. *Nucl. Acids Res.* 42(Database issue):D633-D642. doi:[10.1093/nar/gkt1244](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkt1244)
@@ -262,3 +266,7 @@ Nguyen, N., S. Mirarab, B. Liu, M. Pop, and T. Warnow (2014). TIPP:Taxonomic Ide
 
 Yildirim, S., C. J. Yeoman, S. C. Janga, S. M. Thomas, M. Ho, and S. R. Leigh; Primate Microbiome Consortium, White BA4, Wilson BA2, Stumpf RM3. 2014. Primate vaginal microbiomes exhibit species specificity without universal Lactobacillus dominance. *The ISME Journal* 8(12):2431-44.
 doi:[10.1038/ismej.2014.90](http://www.nature.com/ismej/journal/v8/n12/full/ismej201490a.html)
+
+Nute M., Saleh, E., and Warnow, T. (2018). Evaluating statistical multiple sequence alignment in comparison to other alignment methods on protein data sets. *Systematic Biology*, Volume 68, Issue 3, May 2019, Pages 396-411, [https://doi.org/10.1093/sysbio/syy068](https://academic.oup.com/sysbio/article/68/3/396/5133545)
+
+Mirarab, S., Nguyen N., Guo, S., Wang, L.-S., Kim, J., and Warnow, T. (2014) PASTA: Ultra-Large Multiple Sequence Alignment for Nucleotide and Amino-Acid Sequences. *Journal of Computational Biology* 22(5):377-386.
