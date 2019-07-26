@@ -16,13 +16,9 @@ Taxonomic identification and abundance profiling (with TIPP) of whole shotgun sa
 
 Part I: Taxonomic Identification using TIPP
 -------------------------------------------
-To begin, log in to the MBL servers using ssh using the [instructions from the STAMPS organizers](https://github.com/mblstamps/stamps2018/wiki/Installation#connecting-to-the-mbl-servers). Once you are logged in to the class-## server (the second one), clone this repository:
+To begin, log in to your the cloud instance using the [Jupyter link provided by the STAMPS organizers](https://hackmd.io/@astrobiomike/stamps2019). Once you are into the Jupyter main screen, click the "terminal" link to start a command-line session. Once that has started, clone the repository for this tutorial:
 ```
 git clone https://github.com/MGNute/stamps-tutorial.git
-```
-and load the python 3.6.5 module
-```
-module load python
 ```
 Change into the tipp directory,
 ```
@@ -30,7 +26,7 @@ cd stamps-tutorial/tipp
 ```
 and run TIPP using the following command
 ```
-python /class/stamps-software/sepp/run_tipp.py \
+python /opt/sepp/run_tipp.py \
     -a ../refpkgs/RDP_2016_Clostridia.refpkg/pasta.fasta \
     -t ../refpkgs/RDP_2016_Clostridia.refpkg/pasta.taxonomy \
     -r ../refpkgs/RDP_2016_Clostridia.refpkg/RAxML_info.taxonomy \
@@ -72,7 +68,7 @@ The final options are set specifically for STAMPS tutorial to prevent temporary 
 
 To see all of the [TIPP options](tipp-help.md), run the following command. There are a few practical pointers on these options in the [reference slides](https://github.com/MGNute/stamps-tutorial/blob/master/sepp_tipp_tutorial_slides.pdf) for this tutorial.
 ```
-python /class/stamps-software/sepp/run_tipp.py -h
+python /opt/sepp/run_tipp.py -h
 ```
 By now TIPP may have finished and written the following files
 + [classification information -- csv](tipp/out/TIPP-RDP-CLOSTRIDIA-95-SRR1219742_classification.txt)
@@ -143,7 +139,7 @@ cd ../sepp
 ```
 and run SEPP using the following command
 ```
-python /class/stamps-software/sepp/run_sepp.py \
+python /opt/sepp/run_sepp.py \
     -a ../refpkgs/RDP_2016_Ruminococcaceae.refpkg/pasta_labeled.fasta \
     -t ../refpkgs/RDP_2016_Ruminococcaceae.refpkg/pasta_labeled.taxonomy \
     -r ../refpkgs/RDP_2016_Ruminococcaceae.refpkg/RAxML_info.taxonomy \
@@ -158,7 +154,7 @@ Both the command and the output are nearly identical to TIPP; however, alignment
 
 For this example, we will try out some other tools for visualizing phylogenetic placement. We will first be converting the placement file into a tree format (e.g., newick or xml) with [guppy](https://matsen.github.io/pplacer/generated_rst/guppy.html)
 ```
-/class/stamps-software/sepp/.sepp/bundled-v4.3.2/guppy tog \
+/opt/sepp/.sepp/bundled-v4.3.2/guppy tog \
     --xml \
     SEPP-RDP-RUMINO-READS_placement.json
 ```
@@ -191,7 +187,7 @@ wget https://www.dropbox.com/s/nailtpu67rt8dkv/SEPP-RDP-RUMINO-READS_subset.fast
 
 *Before moving on, let's consider the relationship between alignment, placement, and classification. Use the [cladogram](images/helio-cladogram.pdf) to identify reference sequences near GEQJ1S112HN8VO (e.g., Heliobacterium_modesticaldum_11 -- taxon ID is in the TIPP classification file 498761 -- and the sequence ID is S000469502 -- grep for S000469502). Go back to the TIPP directory, and extract these sequences from the alignment file from TIPP. Visualize the alignment, and compare it to the visualization of GEQJ1S112HF5CU. Now examine the placement file from TIPP. What are branch lengths and maximum likelihood scores for placements of GEQJ1S112HN8VO onto the Clostridia reference tree? Based on this alignment and placement information, discuss TIPP (with 0.50 support thresholds) classifying GEQJ1S112HN8VO as Heliobacterium modesticaldum Ice1 (below species level) versus TIPP (with 0.95 support thresholds) classifying GEQJ1S112HN8VO as Clostridiales order and Unclassified at the family, genus, and species levels.*
 
-**JUST A REMINDER: Small reference alignments and trees are used in this tutorial to save time and make visualization easier; however, the benefits of using SEPP/TIPP are greatest when trees have a large evolutionary diameters and when query sequences are potentially novel or divergent from the any reference sequences. New tools for visualizing phylogenetic placements in the graphical format used in Part I are on the way. A *very* preliminary version of the code to generate them is available on [Github](https://github.com/MGNute/phylogenetic_histograms) and an accompanying manuscript has been submitted.**
+**JUST A REMINDER: Small reference alignments and trees are used in this tutorial to save time and make visualization easier; however, the benefits of using SEPP/TIPP are greatest when trees have a large evolutionary diameters and when query sequences are potentially novel or divergent from the any reference sequences. New tools for visualizing phylogenetic placements in the graphical format used in Part I are on the way. A *very* preliminary version of the code to generate them is available on [Github](https://github.com/MGNute/pican_pi) and an accompanying manuscript has been submitted.**
 
 Part III: Phylogenetic (Abundance) Profiling with TIPP
 ------------------------------------------------------
@@ -202,9 +198,9 @@ mkdir TIPP-COGS-95-SRR059420/markers
 ```
 and run TIPP using the following command
 ```
-python /class/stamps-software/sepp/run_abundance.py \
+python /opt/sepp/run_abundance.py \
     -G cogs \
-    -c /class/stamps-software/sepp/.sepp/tipp.config \
+    -c /opt/sepp/.sepp/tipp.config \
     -at 0.95 \
     -pt 0.95 \
     -f ../samples/shotgun/SRR059420_pass_1_1-25000.fasta \

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # MUST EDIT IF NOT ON MBL SERVERS!
-SEPP="/class/stamps-software/sepp/"
+SEPP="/opt/sepp"
 TIPP="$SEPP/run_abundance.py"
 
 # Default is 0.95 for both thresholds

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # MUST EDIT IF NOT ON MBL SERVERS!
-TIPP="/class/stamps-software/sepp/run_tipp.py"
+TIPP="/opt/sepp/run_tipp.py"
 
 # Set path to RDP 2016 Reference Package
 # 707 sequences from the Clostridia class

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set path to SEPP program
-SEPP="/class/stamps-software/sepp/run_sepp.py"
-GUPPY="/class/stamps-software/sepp/.sepp/bundled-v4.3.2/guppy"
+SEPP="/opt/sepp/run_sepp.py"
+GUPPY="/opt/sepp/.sepp/bundled-v4.3.2/guppy"
 
 # Set path to RDP 2016 Reference Package
 REFPKG="../refpkgs/RDP_2016_Ruminococcaceae.refpkg"
