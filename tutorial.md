@@ -199,7 +199,7 @@ All prior analyses are on 16S, which is not single copy. TIPP can be used for ph
 mkdir TIPP-COGS-95-SRR059420
 mkdir TIPP-COGS-95-SRR059420/markers
 ```
-and run TIPP using the following command
+and run TIPP using the following command *Note: this command is going to take a long time on the cloud isntances, so I suggest not running it right now.*
 ```
 python /opt/sepp/run_abundance.py \
     -G cogs \
