@@ -217,6 +217,39 @@ and the [output](tipp/out/TIPP-95-COGS-SRR059420) will include abundance profile
 
 *Before leaving Woods Hole, consider using the commands in this portion of the tutorial to analyze a shotgun dataset of interest to you. Let us know how it goes!* **Thank you for taking the time to do this tutorial!**
 
+Part IV (Bonus Round): Multiple Sequence Alignment (MSA) with PASTA
+------------------------------------------------------
+Since TIPP and SEPP rely on a reference package, essentially a set of full-length genes that have been aligned along with a phylogenetic tree, it is helpful to run through an example of producing an alignment, which we will do with PASTA. PASTA includes a useful GUI, although it is sometimes easier to run through the command line.
+
+The data for this is a set of 96 amino acid sequences pulled from NCBI. (Note: since SEPP and TIPP are used for placing sequencing reads, a more applicable data set would use DNA sequences, but it is still a helpful example.) The sequences are DNA Gyrase A (gyrA, for short) and can be found [here](https://www.ncbi.nlm.nih.gov/Structure/cdd/COG0188).
+
+Lets first move to the subfolder for the PASTA example:
+```
+cd ../pasta
+```
+Note the files containing the unaligned sequences `gyrA_raw.fasta` and the MSA provided by NCBI `gyrA_ncbi_aln.fasta`. We are going to give the former to PASTA as input. To run PASTA on these sequences, run the following:
+```
+python /opt/pasta-code/pasta/run_pasta.py 
+    -i gyrA_raw.fasta \
+    --temporaries "./tmp/" \
+    -d Protein \
+    -j gyrA_pasta \
+    --num-cpus $(nproc) \
+    -o "./out"
+```
+
+This should take approximately 2 minutes on the Cloud instances. Here, we are specifying the folder `out/` as the destination for the various files that PASTA creates. Once it has completed, the file ending with `.aln` will be non-empty, and that is the final alignment.
+
+When PASTA is done, let's do a quick comparison of the alignment provided by NCBI and the alignment we've just created. Run these two commands to get a few summary statistics about each alignment:
+```
+python ../tools/alignment_stats.py out/gyrA_pasta.marker001.gyrA_raw.aln
+python ../tools/alignment_stats.py gyrA_ncbi_aln.fasta
+```
+Here are some questions to consider:
++ Which alignment has more gaps?
++ Which alignment finds more matches between sites?
++ Which alignment is *better*? Why?
+
 Citations
 ---------
 Cole, J. R., Q. Wang, J. A. Fish, B. Chai, D. M. McGarrell, Y. Sun, C. T. Brown, A. Porras-Alfaro, C. R. Kuske, and J. M. Tiedje. 2014. Ribosomal Database Project: data and tools for high throughput rRNA analysis. *Nucl. Acids Res.* 42(Database issue):D633-D642. doi:[10.1093/nar/gkt1244](https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkt1244)

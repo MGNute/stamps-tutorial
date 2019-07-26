@@ -2,7 +2,7 @@
 
 # Set path to SEPP program
 SEPP="/opt/sepp/run_sepp.py"
-GUPPY="/opt/sepp/.sepp/bundled-v4.3.2/guppy"
+GUPPY="/opt/sepp/.sepp/bundled-v4.3.8/guppy"
 
 # Set path to RDP 2016 Reference Package
 REFPKG="../refpkgs/RDP_2016_Ruminococcaceae.refpkg"
