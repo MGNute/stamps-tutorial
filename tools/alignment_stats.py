@@ -115,6 +115,6 @@ if __name__ == "__main__":
     pd, match_site_pairs, aligned_site_pairs, num_seq_pairs = get_avg_pdistance_of_nparray(fnp)
     print("file: %s" % fa_pa)
     print("  Alignment Length:        %d" % seq_len)
-    print('  Avg %% similarity:        %0.4f' % 1.0 - pd)
+    print('  Avg %% similarity:        %0.4f' % (1.0 - pd))
     print("  # Matched Site-pairs:    %d" % match_site_pairs)
     print("  # Aligned Site-pairs:    %d" % aligned_site_pairs)
