@@ -206,10 +206,10 @@ python /opt/sepp/run_abundance.py \
     -c /opt/sepp/.sepp/tipp.config \
     -at 0.95 \
     -pt 0.95 \
-    -f ../samples/shotgun/SRR059420_pass_1_1-25000.fasta \
+    -f ../samples/shotgun/SRR059420_pass_1_1-250.fasta \
     -d TIPP-COGS-95-SRR059420 \
     --tempdir tmp \
-    --cpu 2
+    --cpu $(nproc)
 ```
 The above command includes the following new options,
 + `-G [whether marker genes or COGs should be used]`
