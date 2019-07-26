@@ -232,7 +232,7 @@ cd ../pasta
 ```
 Note the files containing the unaligned sequences `gyrA_raw.fasta` and the MSA provided by NCBI `gyrA_ncbi_aln.fasta`. We are going to give the former to PASTA as input. To run PASTA on these sequences, run the following:
 ```
-python /opt/pasta-code/pasta/run_pasta.py 
+python /opt/pasta-code/pasta/run_pasta.py \
     -i gyrA_raw.fasta \
     --temporaries "./tmp/" \
     -d Protein \
